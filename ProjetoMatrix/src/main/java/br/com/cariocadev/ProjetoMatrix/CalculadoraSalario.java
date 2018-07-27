@@ -17,7 +17,6 @@ public class CalculadoraSalario {
 		 *  pensei primeiro nisso pois na questao dizia 
 		 *  " retorne o valor do salário líquido descontado o INSS de acordo com a
 		tabela informada */
-		System.out.println("percent: "+salarioLiquido);
 		return salarioLiquido.setScale(2); 
 		}
 		else
@@ -42,24 +41,21 @@ public class CalculadoraSalario {
 		{
 		calculoValorInss=salarioBruto.multiply(multi).divide(new BigDecimal("100"), BigDecimal.ROUND_HALF_UP);
 		
-		System.out.println("valor inss: "+calculoValorInss);
-		System.out.println("valor bruto: "+salarioBruto);
+	
 		}
 
 		if (salarioBruto.compareTo(new BigDecimal("1693.73"))>=0 && salarioBruto.compareTo(new BigDecimal("2822.90"))<=0)
 		{
 		calculoValorInss=salarioBruto.multiply(multi2).divide(new BigDecimal("100"), BigDecimal.ROUND_HALF_UP);
 		
-		System.out.println("valor inss2: "+calculoValorInss);
-		System.out.println("valor bruto2: "+salarioBruto);
+	
 		}  
 		
 		if (salarioBruto.compareTo(new BigDecimal("2822.91"))>=0 )
 			{
 			calculoValorInss=salarioBruto.multiply(multi3).divide(new BigDecimal("100"), BigDecimal.ROUND_HALF_UP);
 			
-			System.out.println("valor inss3: "+calculoValorInss);
-			System.out.println("valor bruto3: "+salarioBruto);
+			
 			}  
 		
 		

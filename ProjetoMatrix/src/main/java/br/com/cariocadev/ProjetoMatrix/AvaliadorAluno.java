@@ -32,13 +32,11 @@ public class AvaliadorAluno {
 				{
 
 			media=nota1.add(nota2).add(nota3).divide(divisor, BigDecimal.ROUND_HALF_UP);
-	        //System.out.println("media é:"+media);
 	
 	    	return media.setScale(2); 
 				}
 		else
 		{
-        //System.out.println("zero "+media);
 
         throw new IllegalArgumentException();
 		}
@@ -48,17 +46,19 @@ public class AvaliadorAluno {
 
 	public String getStatus(BigDecimal nota1, BigDecimal nota2, BigDecimal nota3) {
 		 //Implementação o código aqui
-		
+	   String resultado;
 	   BigDecimal pegarMedia = new BigDecimal("0");  
        pegarMedia=getMedia(nota1,nota2,nota3);
-       //System.out.println("pegamedia"+pegarMedia);
       
       
        if(pegarMedia.compareTo(new BigDecimal("6"))>=1) {
-		return "APROVADO";       }
-       if(pegarMedia.compareTo(new BigDecimal("4"))>=0) {
-       return "PROVA_FINAL"; 	 }
+		resultado="APROVADO";       }
+       else
+    	   if(pegarMedia.compareTo(new BigDecimal("4"))>=0) {
+   		resultado="PROVA_FINAL";       }
        
-       return "REPROVADO";
+       else 
+    	   resultado="REPROVADO";       
+       return resultado;
 	}
-}
+} 
