@@ -67,8 +67,37 @@ public class CalculadoraSalario {
 	
 
 	public BigDecimal getValorPlanoDeSaude(Integer idade) {
-		// TODO Auto-generated method stub
-		return null;
+		BigDecimal valorDesconto = new BigDecimal("0");
+		if(idade != null && idade >= 0) {
+		if(idade >=0 && idade<=9) {
+			valorDesconto=new BigDecimal("75.00");	
+		}
+		 if(idade >=10 && idade<=19) {
+			valorDesconto=new BigDecimal("112.50");	
+		}
+		 if(idade >=20 && idade<=29) {
+			valorDesconto=new BigDecimal("168.75");	
+		}
+		 if(idade >=30 && idade<=39) {
+			valorDesconto=new BigDecimal("253.13");	
+		}
+		 if(idade >=40 && idade<=49) {
+			valorDesconto=new BigDecimal("379.69");	
+		}
+		 if(idade >=50 && idade<=59) {
+			valorDesconto=new BigDecimal("569.54");	
+		}
+		  if (idade >59){
+			valorDesconto=new BigDecimal("854.30");	
+		 }
+		
+		return valorDesconto.setScale(2); }
+		
+        throw new IllegalArgumentException();
+
+
+
+		
 	}
 
 }
