@@ -13,10 +13,6 @@ public class CalculadoraSalario {
 
 		desconto=salarioBruto.multiply(percentualImpostoINSS).divide(new BigDecimal("100"), BigDecimal.ROUND_HALF_UP);
 		salarioLiquido=salarioBruto.subtract(desconto);
-		/*salarioLiquido=salarioBruto.subtract(getValorINSS(salarioBruto));
-		 *  pensei primeiro nisso pois na questao dizia 
-		 *  " retorne o valor do salário líquido descontado o INSS de acordo com a
-		tabela informada */
 		return salarioLiquido.setScale(2); 
 		}
 		else
