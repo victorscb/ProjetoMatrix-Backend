@@ -2,6 +2,10 @@ package br.com.cariocadev.ProjetoMatrix;
 
 import java.math.BigDecimal;
 
+/*
+ * Ajustar a indentação do código.
+ * Lembre se que a IDE faz isso
+ */
 public class CalculadoraSalario {
 
 	public BigDecimal getSalarioLiquido(BigDecimal salarioBruto, BigDecimal percentualImpostoINSS) {
@@ -20,6 +24,11 @@ public class CalculadoraSalario {
 
 	}
 
+	/*
+	 * Nesta validação você pode usar o else if ao invés de um novo if
+	 * as variáveis multi, multi2 e multi2 podem ser suprimidas, além de não possuirem 
+	 * nomes adequados. 
+	 */
 	public BigDecimal getValorINSS(BigDecimal salarioBruto) {
 		// Implementar o código aqui
 		BigDecimal multi = new BigDecimal("8");
@@ -61,7 +70,12 @@ public class CalculadoraSalario {
 	
 	
 	
-
+	/*
+	 * O método funciona corretamente. Entretanto deixo como desafio a refatoração do 
+	 * método de forma que não use ifs em cascatas.
+	 * 
+	 * Nesta validação você pode usar o else if ao invés de um novo if
+	 */
 	public BigDecimal getValorPlanoDeSaude(Integer idade) {
 		BigDecimal valorDesconto = new BigDecimal("0");
 		if(idade != null && idade >= 0) {
