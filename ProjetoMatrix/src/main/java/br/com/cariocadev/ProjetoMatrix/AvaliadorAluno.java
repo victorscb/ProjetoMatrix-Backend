@@ -2,8 +2,13 @@ package br.com.cariocadev.ProjetoMatrix;
 
 import java.math.BigDecimal;
 
+/*
+ * Ajustar a indentação do código.
+ * Lembre se que a IDE faz isso
+ */
 public class AvaliadorAluno {
 
+	
 	public BigDecimal getMaiorNota(BigDecimal[] notas) {
 		// Implementação o código aqui
 	
@@ -18,7 +23,9 @@ public class AvaliadorAluno {
 		}
 	
 	
-
+	/*
+	 * Encapsular a validação em um método
+	 */
 	public BigDecimal getMedia(BigDecimal nota1, BigDecimal nota2, BigDecimal nota3) {
 		BigDecimal media = new BigDecimal("0");
 		BigDecimal divisor = new BigDecimal("3");
@@ -44,6 +51,10 @@ public class AvaliadorAluno {
 		
 	}
 
+	/*
+	 * pegarMedia não é um nome adequado para variável
+	 * 
+	 */
 	public String getStatus(BigDecimal nota1, BigDecimal nota2, BigDecimal nota3) {
 		 //Implementação o código aqui
 	   String resultado;
