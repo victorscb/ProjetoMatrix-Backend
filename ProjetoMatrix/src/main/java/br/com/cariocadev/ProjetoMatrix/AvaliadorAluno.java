@@ -21,11 +21,7 @@ public class AvaliadorAluno {
 	public BigDecimal getMedia(BigDecimal nota1, BigDecimal nota2, BigDecimal nota3) {
 		BigDecimal media = new BigDecimal("0");
 		BigDecimal divisor = new BigDecimal("3");
-		if ((nota1 != null && nota2 != null && nota3 != null)
-				&& (nota1.compareTo(new BigDecimal("10")) <= 0 && nota2.compareTo(new BigDecimal("10")) <= 0
-						&& nota3.compareTo(new BigDecimal("10")) <= 0)
-				&& (nota1.compareTo(new BigDecimal("0")) > 0 && nota2.compareTo(new BigDecimal("0")) > 0
-						&& nota3.compareTo(new BigDecimal("0")) > 0)) {
+		if (validarNota(nota1) && validarNota(nota2) && validarNota(nota3)) {
 
 			media = nota1.add(nota2).add(nota3).divide(divisor, BigDecimal.ROUND_HALF_UP);
 
@@ -53,4 +49,16 @@ public class AvaliadorAluno {
 			resultado = "REPROVADO";
 		return resultado;
 	}
+
+	public boolean validarNota(BigDecimal nota1, BigDecimal nota2, BigDecimal nota3) {
+		if ((nota1 != null && nota2 != null && nota3 != null)
+				&& (nota1.compareTo(new BigDecimal("10")) <= 0 && nota2.compareTo(new BigDecimal("10")) <= 0
+						&& nota3.compareTo(new BigDecimal("10")) <= 0)
+				&& (nota1.compareTo(new BigDecimal("0")) > 0 && nota2.compareTo(new BigDecimal("0")) > 0
+						&& nota3.compareTo(new BigDecimal("0")) > 0)) {
+			return true;
+		} else
+			return false;
+	}
+
 }
